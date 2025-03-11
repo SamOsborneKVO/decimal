@@ -1386,6 +1386,10 @@ defmodule Decimal do
     end
   end
 
+  def new(float) when is_float(float) do
+    from_float(float)
+  end
+
   @doc """
   Creates a new decimal number from the sign, coefficient and exponent such that
   the number will be: `sign * coefficient * 10 ^ exponent`.
